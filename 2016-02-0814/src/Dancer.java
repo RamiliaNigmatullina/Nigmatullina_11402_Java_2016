@@ -39,6 +39,7 @@ public class Dancer extends Human {
         this.styles = styles;
     }
 
+    // полиморфизм
     @Override
     public void move() {
         System.out.println("I move smoothly and beautifully.");

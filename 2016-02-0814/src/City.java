@@ -6,7 +6,7 @@ public class City {
     public City() {
     }
 
-    public City(long population, String country, String name) {
+    public City(String name, String country, long population)  {
         this.population = population;
         this.country = country;
         this.name = name;
