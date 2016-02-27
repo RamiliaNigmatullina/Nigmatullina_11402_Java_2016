@@ -37,14 +37,4 @@ public class ComplexNumber {
     public ComplexNumber mult (ComplexNumber cn) {
         return new ComplexNumber(x * cn.x - y * cn.y, x * cn.y + y * cn.x);
     }
-
-    public String toString() {
-        if (y >= 0) {
-            return x + " + " + y + " * i";
-        }
-        else {
-            return x + " - " + -y + " * i";
-        }
-    }
-
 }

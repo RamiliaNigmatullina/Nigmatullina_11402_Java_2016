@@ -21,9 +21,4 @@ public class ComplexVector2D {
     public ComplexNumber getCn2() {
         return cn2;
     }
-
-    @Override
-    public String toString() {
-        return "<" + this.cn1 + ", " + this.cn2 + ">";
-    }
 }

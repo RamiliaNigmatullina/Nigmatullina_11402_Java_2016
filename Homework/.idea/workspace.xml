@@ -18,7 +18,7 @@
     <SUITE FILE_PATH="coverage/Homework$Matrix2x2Test.coverage" NAME="Matrix2x2Test Coverage Results" MODIFIED="1456251528374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Task002.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Homework$ComplexMatrix2x2Test.coverage" NAME="ComplexMatrix2x2Test Coverage Results" MODIFIED="1456510007414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Homework$ComplexMatrix2x2Test.coverage" NAME="ComplexMatrix2x2Test Coverage Results" MODIFIED="1456550099576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Task003.*</FILTER>
     </SUITE>
   </component>
@@ -35,18 +35,51 @@
         <entry file="file://$PROJECT_DIR$/src/Task003/ComplexVector2D.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding>
+                <element signature="e#303#304#0" expanded="true" />
+                <element signature="e#329#330#0" expanded="true" />
+                <element signature="e#366#367#0" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComplexMatrix2x2Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ComplexNumber.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Task003/ComplexNumber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36072144">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+              <folding>
+                <element signature="e#161#162#0" expanded="true" />
+                <element signature="e#186#187#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComplexMatrix2x2Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Task003/ComplexMatrix2x2Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.422846">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="761" column="45" selection-start-line="761" selection-start-column="45" selection-end-line="761" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComplexMatrix2x2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Task003/ComplexMatrix2x2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <element signature="e#1455#1456#0" expanded="true" />
+                <element signature="e#1532#1533#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,11 +104,11 @@
         <option value="$PROJECT_DIR$/src/Task002/Vector2D.java" />
         <option value="$PROJECT_DIR$/src/Task002/Matrix2x2.java" />
         <option value="$PROJECT_DIR$/src/Task002/Matrix2x2Test.java" />
-        <option value="$PROJECT_DIR$/src/Task003/ComplexVector2D.java" />
-        <option value="$PROJECT_DIR$/src/Task003/ComplexMatrix2x2.java" />
         <option value="$PROJECT_DIR$/src/Task003/MyClass.java" />
-        <option value="$PROJECT_DIR$/src/Task003/ComplexNumber.java" />
+        <option value="$PROJECT_DIR$/src/Task003/ComplexMatrix2x2.java" />
         <option value="$PROJECT_DIR$/src/Task003/ComplexMatrix2x2Test.java" />
+        <option value="$PROJECT_DIR$/src/Task003/ComplexVector2D.java" />
+        <option value="$PROJECT_DIR$/src/Task003/ComplexNumber.java" />
       </list>
     </option>
   </component>
@@ -777,44 +810,44 @@
       <option name="number" value="Default" />
       <updated>1456228117496</updated>
       <workItem from="1456228120895" duration="21747000" />
-      <workItem from="1456489417125" duration="12554000" />
+      <workItem from="1456489417125" duration="18648000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ComplexMatrix2x2Test - 2016.02.26 at 20h 54m 15s.xml">
+    <history-entry file="ComplexMatrix2x2Test - 2016.02.27 at 08h 05m 03s.xml">
       <configuration name="ComplexMatrix2x2Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ComplexMatrix2x2Test - 2016.02.26 at 20h 54m 36s.xml">
+    <history-entry file="ComplexMatrix2x2Test - 2016.02.27 at 08h 05m 37s.xml">
       <configuration name="ComplexMatrix2x2Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ComplexMatrix2x2Test - 2016.02.26 at 20h 59m 10s.xml">
+    <history-entry file="ComplexMatrix2x2Test - 2016.02.27 at 08h 08m 39s.xml">
       <configuration name="ComplexMatrix2x2Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ComplexMatrix2x2Test - 2016.02.26 at 20h 59m 29s.xml">
+    <history-entry file="ComplexMatrix2x2Test - 2016.02.27 at 08h 11m 10s.xml">
       <configuration name="ComplexMatrix2x2Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ComplexMatrix2x2Test - 2016.02.26 at 21h 00m 12s.xml">
+    <history-entry file="ComplexMatrix2x2Test - 2016.02.27 at 08h 11m 31s.xml">
       <configuration name="ComplexMatrix2x2Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ComplexMatrix2x2Test - 2016.02.26 at 21h 00m 31s.xml">
+    <history-entry file="ComplexMatrix2x2Test - 2016.02.27 at 08h 13m 01s.xml">
       <configuration name="ComplexMatrix2x2Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ComplexMatrix2x2Test - 2016.02.26 at 21h 01m 32s.xml">
+    <history-entry file="ComplexMatrix2x2Test - 2016.02.27 at 08h 13m 40s.xml">
       <configuration name="ComplexMatrix2x2Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ComplexMatrix2x2Test - 2016.02.26 at 21h 02m 37s.xml">
+    <history-entry file="ComplexMatrix2x2Test - 2016.02.27 at 08h 13m 49s.xml">
       <configuration name="ComplexMatrix2x2Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ComplexMatrix2x2Test - 2016.02.26 at 21h 02m 58s.xml">
+    <history-entry file="ComplexMatrix2x2Test - 2016.02.27 at 08h 14m 19s.xml">
       <configuration name="ComplexMatrix2x2Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ComplexMatrix2x2Test - 2016.02.26 at 21h 06m 49s.xml">
+    <history-entry file="ComplexMatrix2x2Test - 2016.02.27 at 08h 15m 01s.xml">
       <configuration name="ComplexMatrix2x2Test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34301000" />
+    <option name="totallyTimeSpent" value="40395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -851,7 +884,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="21" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -867,19 +900,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Task003/ComplexVector2D.java">
+    <entry file="file://$PROJECT_DIR$/src/Task003/ComplexMatrix2x2Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+          <caret line="761" column="45" selection-start-line="761" selection-start-column="45" selection-end-line="761" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Task003/ComplexMatrix2x2Test.java">
+    <entry file="file://$PROJECT_DIR$/src/Task003/ComplexMatrix2x2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.422846">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Task003/ComplexVector2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Task003/ComplexNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36072144">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#161#162#0" expanded="true" />
+            <element signature="e#186#187#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
