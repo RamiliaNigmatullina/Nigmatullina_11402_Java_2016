@@ -13,7 +13,7 @@ import static org.mockito.Mockito.*;
  */
 
 public class ComplexMatrix2x2Test {
-    private final double EPS = 1e-9;;
+    private final double EPS = 1e-9;
 
     //ComplexMatrix2x2() - конструктор для нулевой матрицы
     @Test
