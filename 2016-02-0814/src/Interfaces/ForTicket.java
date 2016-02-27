@@ -1,3 +1,5 @@
+package Interfaces;
+
 public interface ForTicket {
     void printTicket();
     void checkTicket();

@@ -1,3 +1,5 @@
+package Interfaces;
+
 public interface HumanActions {
     void move();
     void speak();

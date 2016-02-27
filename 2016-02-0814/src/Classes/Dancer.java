@@ -1,3 +1,5 @@
+package Classes;
+
 import java.util.ArrayList;
 
 public class Dancer extends Human {
@@ -19,29 +21,22 @@ public class Dancer extends Human {
         return awards;
     }
 
-    public void setAwards(ArrayList<String> awards) {
-        this.awards = awards;
-    }
-
     public void getTheatre() {
         System.out.println(name + " is working in " + theatre.getName());
-    }
-
-    public void setTheatre(Theatre theatre) {
-        this.theatre = theatre;
     }
 
     public void getStyle() {
         System.out.println(name + " dances in the following styles: " + styles);
     }
 
-    public void setStyles(ArrayList<String> styles) {
-        this.styles = styles;
-    }
-
     // полиморфизм
     @Override
     public void move() {
         System.out.println("I move smoothly and beautifully.");
+    }
+
+    @Override
+    public String toString() {
+        return "My name is " + this.getName() + ". I'm a dancer.";
     }
 }

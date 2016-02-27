@@ -1,40 +1,38 @@
+package Classes;
+
+import Interfaces.ForTicket;
+
 public class Ticket extends Paper implements ForTicket {
     Performance performance;
-    int seat;
     String date;
+    int price;
+    Seat seat;
 
     public Ticket() {
     }
 
-    public Ticket(String color, String paperQuality, String size, Performance performance, int seat, String date) {
+    public Ticket(String color, String paperQuality, String size, Performance performance, String date, int price, Seat seat) {
         super(color, paperQuality, size);
         this.performance = performance;
-        this.seat = seat;
         this.date = date;
+        this.price = price;
+        this.seat = seat;
     }
 
     public Performance getPerformance() {
         return performance;
     }
 
-    public void setPerformance(Performance performance) {
-        this.performance = performance;
-    }
-
     public String getDate() {
         return date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public int getPrice() {
+        return price;
     }
 
-    public int getSeat() {
+    public Seat getSeat() {
         return seat;
-    }
-
-    public void setSeat(int seat) {
-        this.seat = seat;
     }
 
     @Override
@@ -49,11 +47,16 @@ public class Ticket extends Paper implements ForTicket {
 
     @Override
     public void buyTicket() {
-        System.out.println("Here are your tickets. Thank you for your purchase.");
+        System.out.println("Your tickets. Thank you for your purchase.");
     }
 
     @Override
     public void checkSeat() {
         System.out.println("Our place is ...");
+    }
+
+    @Override
+    public String toString() {
+        return "It's a ticket.";
     }
 }

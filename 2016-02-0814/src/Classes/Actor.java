@@ -1,3 +1,7 @@
+package Classes;
+
+import Interfaces.ActorActions;
+
 import java.util.ArrayList;
 
 public class Actor extends Human implements ActorActions {
@@ -16,16 +20,16 @@ public class Actor extends Human implements ActorActions {
         this.awards = awards;
     }
 
-    public void setTheNumberOfPerformances(int theNumberOfPerformances) {
-        this.theNumberOfPerformances = theNumberOfPerformances;
+    public int getTheNumberOfPerformances() {
+        return theNumberOfPerformances;
     }
 
-    public void setBestPerformances(ArrayList<Performance> bestPerformances) {
-        this.bestPerformances = bestPerformances;
+    public ArrayList<Performance> getBestPerformances() {
+        return bestPerformances;
     }
 
-    public void setAwards(ArrayList<String> awards) {
-        this.awards = awards;
+    public ArrayList<String> getAwards() {
+        return awards;
     }
 
     @Override
@@ -50,5 +54,10 @@ public class Actor extends Human implements ActorActions {
 
     public void whoAmI() {
         System.out.println("I'm an actor.");
+    }
+
+    @Override
+    public String toString() {
+        return "My name is " + this.getName() + ". I'm an actor.";
     }
 }

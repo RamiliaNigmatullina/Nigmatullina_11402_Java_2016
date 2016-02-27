@@ -1,3 +1,5 @@
+import Classes.*;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -24,32 +26,37 @@ public class Main {
         stylesDancer.add("sth");
         Dancer dancer = new Dancer("Alina", city, "10.05.1990", awardsDancer, theatre, stylesDancer);
         Actor actor = new Actor("Robert", philadelphia, "23.04.1962", 22, null, null);
-        Viewer viewer = new Viewer("Natasha", city, "03.05.1997", performance, "12.02.2016 18:00", 56);
+        Seat seat = new Seat(theatre, 9, 10);
+        Ticket ticket = new Ticket("White", "high", "5x12", performance, "07.01.2016", 3000, seat);
+        Viewer viewer = new Viewer("Natasha", city, "03.05.1997", performance, "12.02.2016 18:00", ticket);
         Comment comment = new Comment("Bla", internetUser, "12.02.2016");
         Paper paper = new Paper("White", "high", "5x12");
-        Ticket ticket = new Ticket("White", "high", "5x12", performance, 24, "07.01.2016");
 
         System.out.println();
 
-        city.getName();
+        System.out.println(city.getName());
         city.getCountry();
         city.getPopulation();
-        theatre.getName();
+        System.out.println(city);
+        System.out.println(theatre.getName());
         theatre.getCity();
         theatre.getWebsite();
-        performance.getName();
+        System.out.println(theatre);
+        System.out.println(performance.getName());
         performance.getTheatre();
         performance.getDescription();
-        human.getName();
+        System.out.println(performance);
+        System.out.println(human.getName());
         human.getCity();
         human.getAge();
         human.move();
         human.speak();
         human.think();
         human.eat();
-        internetUser.getUsername();
-        internetUser.getEmail();
-        internetUser.getPassword();
+        System.out.println(human);
+        System.out.println(internetUser.getUsername());
+        System.out.println(internetUser.getEmail());
+        System.out.println(internetUser.getPassword());
         internetUser.whoAmI();
         internetUser.leaveComment(comment);
         internetUser.deleteComment(comment);
@@ -59,19 +66,25 @@ public class Main {
         internetUser.signIn();
         internetUser.readPost();
         internetUser.buyTicketToPerformanceOnline(performance);
+        System.out.println(internetUser);
         dancer.getTheatre();
-        dancer.getAwards();
+        System.out.println(dancer.getAwards());
         dancer.getStyle();
-        dancer.move(); // метод переопределен в классе Dancer
+        dancer.move(); // метод переопределен в классе Classes.Dancer
+        System.out.println(dancer);
         actor.getAge();
         actor.getCity();
-        actor.getName();
+        System.out.println(actor.getName());
+        System.out.println(actor.getTheNumberOfPerformances());
+        System.out.println(actor.getBestPerformances());
+        System.out.println(actor.getAwards());
         actor.readTheScript();
         actor.play();
         actor.rehearse();
-        viewer.getPerformance();
-        viewer.getSeatNumber();
-        viewer.getDateAndTime();
+        System.out.println(actor);
+        System.out.println(viewer.getPerformance());
+        System.out.println(viewer.getDateAndTime());
+        System.out.println(viewer.getTicket());
         viewer.buyTicket();
         viewer.checkIfSeatIsFree(56);
         viewer.applaud();
@@ -80,15 +93,23 @@ public class Main {
         viewer.makePhotoInTheTheatre();
         viewer.admire();
         viewer.eatAtTheBuffet();
-        paper.getColor();
-        paper.getPaperQuality();
-        paper.getSize();
-        ticket.getDate();
-        ticket.getPerformance();
-        ticket.getSeat();
+        System.out.println(viewer);
+        System.out.println(paper.getColor());
+        System.out.println(paper.getPaperQuality());
+        System.out.println(paper.getSize());
+        System.out.println(paper);
+        System.out.println(seat.getTheatre());
+        System.out.println(seat.getRow());
+        System.out.println(seat.getSeatNumber());
+        System.out.println(seat);
+        System.out.println(ticket.getDate());
+        System.out.println(ticket.getPerformance());
+        System.out.println(ticket.getPrice());
+        System.out.println(ticket.getSeat());
         ticket.buyTicket();
         ticket.checkSeat();
         ticket.checkTicket();
         ticket.printTicket();
+        System.out.println(ticket);
     }
 }

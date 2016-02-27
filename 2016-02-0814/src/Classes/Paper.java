@@ -1,3 +1,5 @@
+package Classes;
+
 public class Paper {
     String paperQuality;
     String size;
@@ -16,23 +18,16 @@ public class Paper {
         return size;
     }
 
-    public void setSize(String size) {
-        this.size = size;
-    }
-
     public String getPaperQuality() {
         return paperQuality;
-    }
-
-    public void setPaperQuality(String paperQuality) {
-        this.paperQuality = paperQuality;
     }
 
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    @Override
+    public String toString() {
+        return "It's a simple piece of paper.";
     }
 }

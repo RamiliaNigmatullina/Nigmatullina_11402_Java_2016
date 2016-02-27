@@ -1,40 +1,33 @@
+package Classes;
+
+import Interfaces.ForPerformance;
+import Interfaces.ForTheatre;
+
 public class Viewer extends Human implements ForPerformance, ForTheatre {
     Performance performance;
     String dateAndTime;
-    int seatNumber;
+    Ticket ticket;
 
     public Viewer() {
     }
 
-    public Viewer(String name, City city, String dateOfBirth, Performance performance, String dateAndTime, int seatNumber) {
+    public Viewer(String name, City city, String dateOfBirth, Performance performance, String dateAndTime, Ticket ticket) {
         super(name, city, dateOfBirth);
         this.performance = performance;
         this.dateAndTime = dateAndTime;
-        this.seatNumber = seatNumber;
+        this.ticket = ticket;
     }
 
     public Performance getPerformance() {
         return performance;
     }
 
-    public void setPerformance(Performance performance) {
-        this.performance = performance;
-    }
-
     public String getDateAndTime() {
         return dateAndTime;
     }
 
-    public void setDateAndTime(String dateAndTime) {
-        this.dateAndTime = dateAndTime;
-    }
-
-    public int getSeatNumber() {
-        return seatNumber;
-    }
-
-    public void setSeatNumber(int seatNumber) {
-        this.seatNumber = seatNumber;
+    public Ticket getTicket() {
+        return ticket;
     }
 
     @Override
@@ -75,5 +68,10 @@ public class Viewer extends Human implements ForPerformance, ForTheatre {
     @Override
     public void eatAtTheBuffet() {
         System.out.println("Hm, it's tasty.");
+    }
+
+    @Override
+    public String toString() {
+        return "My name is " + this.name + ". I'm a viewer.";
     }
 }

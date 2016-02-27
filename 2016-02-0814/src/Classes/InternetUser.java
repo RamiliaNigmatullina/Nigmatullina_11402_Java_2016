@@ -1,3 +1,8 @@
+package Classes;
+
+import Interfaces.ActionsWithComments;
+import Interfaces.InternetUserActions;
+
 public class InternetUser extends Human implements ActionsWithComments, InternetUserActions {
     String username;
     String email;
@@ -17,24 +22,12 @@ public class InternetUser extends Human implements ActionsWithComments, Internet
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getPassword() {
         return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public void whoAmI() {
@@ -43,17 +36,17 @@ public class InternetUser extends Human implements ActionsWithComments, Internet
 
     @Override
     public void leaveComment(Comment comment) {
-        System.out.println("Comment added.");
+        System.out.println("Classes.Comment added.");
     }
 
     @Override
     public void deleteComment(Comment comment) {
-        System.out.println("Comment deleted.");
+        System.out.println("Classes.Comment deleted.");
     }
 
     @Override
     public void editComment(Comment comment) {
-        System.out.println("Comment changed.");
+        System.out.println("Classes.Comment changed.");
     }
 
     @Override
@@ -78,6 +71,11 @@ public class InternetUser extends Human implements ActionsWithComments, Internet
 
     @Override
     public void buyTicketToPerformanceOnline(Performance performance) {
-        System.out.println("Ticket purchased.");
+        System.out.println("Classes.Ticket purchased.");
+    }
+
+    @Override
+    public String toString() {
+        return "My name is " + this.getName() + ". I'm a Internet user.";
     }
 }

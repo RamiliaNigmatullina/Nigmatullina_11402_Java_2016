@@ -1,3 +1,5 @@
+package Classes;
+
 public class Comment {
     String text;
     InternetUser internetUser;
@@ -16,23 +18,16 @@ public class Comment {
         return text;
     }
 
-    public void setText(String text) {
-        this.text = text;
-    }
-
     public InternetUser getInternetUser() {
         return internetUser;
-    }
-
-    public void setInternetUser(InternetUser internetUser) {
-        this.internetUser = internetUser;
     }
 
     public String getDate() {
         return date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    @Override
+    public String toString() {
+        return "Comment: " + this.text + ".";
     }
 }

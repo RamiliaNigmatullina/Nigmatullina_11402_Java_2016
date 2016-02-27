@@ -1,3 +1,7 @@
+package Classes;
+
+import Interfaces.HumanActions;
+
 public class Human implements HumanActions {
     String name;
     City city;
@@ -9,18 +13,6 @@ public class Human implements HumanActions {
     public Human(String name, City city, String dateOfBirth) {
         this.name = name;
         this.city = city;
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -54,5 +46,10 @@ public class Human implements HumanActions {
     @Override
     public void eat() {
         System.out.println("I'm eating");
+    }
+
+    @Override
+    public String toString() {
+        return "My name is " + this.getName() + ". I'm a human.";
     }
 }
