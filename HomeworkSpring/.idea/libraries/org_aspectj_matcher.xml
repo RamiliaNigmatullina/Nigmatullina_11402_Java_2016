@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="org.aspectj.matcher">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Libraries /aspectj1.8/lib/org.aspectj.matcher.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
