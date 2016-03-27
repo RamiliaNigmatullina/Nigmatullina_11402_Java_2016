@@ -2,46 +2,44 @@ package ru.kpfu.itis.nigmatullina.controllers.task014;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @Controller
 @RequestMapping("/search")
 public class SearchController {
-    @RequestMapping(value="/add", method = RequestMethod.GET)
-    public String add(ModelMap model, @RequestParam(required = false) String path) {
-        Pattern p = Pattern.compile("([0-9]+)/([0-9]+)");
-        Matcher m = p.matcher(path);
-        System.out.println(path);
-        if (m.matches()) {
-            int num1 = Integer.parseInt(m.group(1));
-            int num2 = Integer.parseInt(m.group(2));
-            model.put("num1", num1);
-            model.put("num2", num2);
+
+    @RequestMapping(value="/add/{num1}/{num2}", method = RequestMethod.GET)
+    public String add(ModelMap model, @PathVariable String num1, @PathVariable String num2) {
+        try {
+            int n1 = Integer.parseInt(num1);
+            int n2 = Integer.parseInt(num2);
+            model.put("num1", n1);
+            model.put("num2", n2);
             model.put("oper", "+");
-            model.put("res", num1 + num2);
+            model.put("res", n1 + n2);
             return "task014/math";
-        } else return "task014/404";
+        } catch (NumberFormatException e) {
+            return "task014/404";
+        }
     }
 
-    @RequestMapping(value="/mult", method = RequestMethod.GET)
-    public String mult(ModelMap model, @RequestParam(required = false) String path) {
-        Pattern p = Pattern.compile("/([0-9]+)/([0-9]+)");
-        Matcher m = p.matcher(path);
-        if (m.matches()) {
-            int num1 = Integer.parseInt(m.group(1));
-            int num2 = Integer.parseInt(m.group(2));
-            model.put("num1", num1);
-            model.put("num2", num2);
+    @RequestMapping(value="/mult/{num1}/{num2}", method = RequestMethod.GET)
+    public String mult(ModelMap model, @PathVariable String num1, @PathVariable String num2) {
+        try {
+            int n1 = Integer.parseInt(num1);
+            int n2 = Integer.parseInt(num2);
+            model.put("num1", n1);
+            model.put("num2", n2);
             model.put("oper", "*");
-            model.put("res", num1 * num2);
+            model.put("res", n1 * n2);
             return "task014/math";
-        } else return "task014/404";
+        } catch (NumberFormatException e) {
+            return "task014/404";
+        }
     }
 
     @RequestMapping(value="/getdate", method = RequestMethod.GET)
