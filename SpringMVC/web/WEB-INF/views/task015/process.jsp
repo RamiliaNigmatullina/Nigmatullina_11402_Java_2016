@@ -14,8 +14,8 @@
 </head>
 <body>
 <form action="/process" method="post">
-    <label for='text_field'>Text: </label><br>
-    <textarea name='text_field' id='text_field' rows='10' cols='50'></textarea><br>
+    <label for='text'>Text: </label><br>
+    <textarea name='text' id='text' rows='10' cols='50'></textarea><br>
     <label for='operation'>Select any operation: </label><br>
     <select style='margin: 5px 0px' name='operation' id='operation'>
         <option value='characters'>The number of characters</option>

@@ -2,17 +2,14 @@ package ru.kpfu.itis.nigmatullina.controllers.task015;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import javax.servlet.http.HttpServletRequest;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/process")
 public class ProcessController {
 
     @RequestMapping(method = RequestMethod.POST)
-    public String processPost(HttpServletRequest request) {
-        String text = request.getParameter("text_field");
-        String operation = request.getParameter("operation");
+    public String processPost(@RequestParam(required = true) String text, @RequestParam(required = true) String operation) {
         int result = 0;
         switch (operation) {
             case "characters":
