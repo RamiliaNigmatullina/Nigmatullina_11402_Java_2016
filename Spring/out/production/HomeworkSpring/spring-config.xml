@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="city" class="Task006.Classes.City">
+        <constructor-arg value="Казань"/>
+        <constructor-arg value="Россия"/>
+        <constructor-arg value="1216965"/>
+    </bean>
+
+    <bean id="theatre" class="Task006.Classes.Theatre">
+        <constructor-arg value="Казанский академический русский большой драматический театр имени В. И. Качалова"/>
+        <constructor-arg value="http://www.teatrkachalov.ru/"/>
+        <constructor-arg ref="city"/>
+    </bean>
+
+    <bean id="performance" class="Task006.Classes.Performance">
+        <constructor-arg value="Золотой слон"/>
+        <constructor-arg ref="theatre"/>
+        <constructor-arg value="Александр Славутский, оставляя и где-то даже нарочито утрируя комедийный .."/>
+    </bean>
+
+    <bean id="human" class="Task006.Classes.Human">
+        <constructor-arg value="Liza"/>
+        <constructor-arg ref="city"/>
+        <constructor-arg value="29.06.1992"/>
+    </bean>
+
+    <bean id="internetUser" class="Task006.Classes.InternetUser">
+        <constructor-arg value="Liza"/>
+        <constructor-arg ref="city"/>
+        <constructor-arg value="29.06.1992"/>
+        <constructor-arg value="liza"/>
+        <constructor-arg value="liza@gmail.com"/>
+        <constructor-arg value="liza"/>
+    </bean>
+
+    <bean id="awards" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <value>First award</value>
+                <value>Second award</value>
+                <value>Third award</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="styles" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <value>First style</value>
+                <value>Second style</value>
+                <value>Third style</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="bestPerformances" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="performance" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="dancer" class="Task006.Classes.Dancer">
+        <constructor-arg value="Alina"/>
+        <constructor-arg ref="city"/>
+        <constructor-arg value="10.05.1990"/>
+        <constructor-arg ref="awards"/>
+        <constructor-arg ref="theatre"/>
+        <constructor-arg ref="styles"/>
+    </bean>
+
+    <bean id="actor" class="Task006.Classes.Actor">
+        <constructor-arg value="Robert"/>
+        <constructor-arg ref="city"/>
+        <constructor-arg value="23.04.1962"/>
+        <constructor-arg value="22"/>
+        <constructor-arg ref="bestPerformances"/>
+        <constructor-arg ref="awards"/>
+    </bean>
+
+    <bean id="seat" class="Task006.Classes.Seat">
+        <constructor-arg ref="theatre"/>
+        <constructor-arg value="9"/>
+        <constructor-arg value="10"/>
+    </bean>
+
+    <bean id="ticket" class="Task006.Classes.Ticket">
+        <constructor-arg value="White"/>
+        <constructor-arg value="high"/>
+        <constructor-arg value="5x12"/>
+        <constructor-arg ref="performance"/>
+        <constructor-arg value="07.01.2016"/>
+        <constructor-arg value="3000"/>
+        <constructor-arg ref="seat"/>
+    </bean>
+
+    <bean id="viewer" class="Task006.Classes.Viewer">
+        <constructor-arg value="Natasha"/>
+        <constructor-arg ref="city"/>
+        <constructor-arg value="3.05.1997"/>
+        <constructor-arg ref="performance"/>
+        <constructor-arg value="12.02.2016 18:00"/>
+        <constructor-arg ref="ticket"/>
+    </bean>
+
+    <bean id="comment" class="Task006.Classes.Comment">
+        <constructor-arg value="Bla"/>
+        <constructor-arg ref="internetUser"/>
+        <constructor-arg value="12.02.2016"/>
+    </bean>
+
+    <bean id="paper" class="Task006.Classes.Paper">
+        <constructor-arg value="White"/>
+        <constructor-arg value="high"/>
+        <constructor-arg value="5x12"/>
+    </bean>
+
+
+    <aop:aspectj-autoproxy/>
+
+    <!-- Task011. For around advice. -->
+    <!-- бин для разработчика -->
+    <bean id="city1" class="Task011.City">
+        <constructor-arg value="1"/>
+        <constructor-arg value="Moscow"/>
+    </bean>
+
+    <bean id="city2" class="Task011.City">
+        <constructor-arg value="2"/>
+        <constructor-arg value="Samara"/>
+    </bean>
+
+    <bean id="city3" class="Task011.City">
+        <constructor-arg value="3"/>
+        <constructor-arg value="Sochi"/>
+    </bean>
+
+    <bean id="cities" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="city1" />
+                <ref bean="city2" />
+                <ref bean="city3" />
+            </list>
+        </constructor-arg>
+    </bean>
+    <bean id="cityRepository" class="Task011.CityRepository">
+        <constructor-arg ref="cities"/>
+    </bean>
+
+    <!-- Task011. For before advice. -->
+    <bean id="coupleUserIdAndPerfId" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <value>1</value>
+                <value>1</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="wantToVisit" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="coupleUserIdAndPerfId" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="wantToVisitRepository" class="Task011.WantToVisitRepository">
+        <constructor-arg ref="wantToVisit"/>
+    </bean>
+
+    <!-- Task011. Бин для аспекта -->
+    <bean id="findTime" class="Task011.MyAspect" />
+
+    <!-- Task012 -->
+    <bean id="postRepository" class="Task012.PostRepository" />
+    <bean id="myAspects" class="Task012.MyAspects" />
+
+    <!-- Task013. Email Validation -->
+    <bean id="email" class="Task013.Email" />
+    <bean id="emailValidation" class="Task013.EmailValidation" />
+
+</beans>

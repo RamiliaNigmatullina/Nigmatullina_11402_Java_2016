@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
- <p>${result}</p>
+ <p>The number of ${operation}: ${result}</p>
 </body>
 </html>

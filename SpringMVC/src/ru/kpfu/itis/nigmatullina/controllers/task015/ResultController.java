@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/result")
 public class ResultController {
-    @RequestMapping(value="/{result}", method = RequestMethod.GET)
-    public String result(ModelMap model, @PathVariable String result) {
+    @RequestMapping(value="/{operation}/{result}", method = RequestMethod.GET)
+    public String result(ModelMap model, @PathVariable String operation, @PathVariable int result) {
+        model.put("operation", operation);
         model.put("result", result);
         return "task015/result";
     }

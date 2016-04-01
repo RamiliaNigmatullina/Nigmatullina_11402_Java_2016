@@ -1,63 +1,57 @@
 package ru.kpfu.itis.nigmatullina.controllers.task015;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping("/process")
 public class ProcessController {
 
     @RequestMapping(method = RequestMethod.POST)
-    public String processPost(@ModelAttribute Text text) {
-        switch (text.getOperation()) {
+    public String processPost(HttpServletRequest request) {
+        String text = request.getParameter("text_field");
+        String operation = request.getParameter("operation");
+        int result = 0;
+        switch (operation) {
             case "characters":
-                return "redirect:/result/The number of characters: " + text.getText().length();
-            case "words": {
-                text.setText(text.getText().replaceAll("\\r\\n", " ").trim());
+                result = text.length();
+            case "words":
+                text = text.replaceAll("\\r\\n", " ").trim();
                 int k;
                 do {
                     k = 0;
-                    if (text.getText().contains("  ")) {
-                        text.setText(text.getText().replaceAll("  ", " "));
+                    if (text.contains("  ")) {
+                        text = text.replaceAll("  ", " ");
                         k++;
                     }
                 } while (k != 0);
-                String words[] = text.getText().split(" ");
-                int w = words.length;
-                return "redirect:/result/The number of words: " + w;
-            }
-            case "sentences": {
-                int k = 0;
-                for (int i = 1; i < text.getText().length(); i++) {
-                    if ((text.getText().charAt(i) == '.' || text.getText().charAt(i) == '!' || text.getText().charAt(i) == '?') &&
-                            text.getText().charAt(i - 1) != '.' && text.getText().charAt(i - 1) != '!' && text.getText().charAt(i - 1) != '?') {
-                        k++;
+                String words[] = text.split(" ");
+                result = words.length;
+            case "sentences":
+                for (int i = 1; i < text.length(); i++) {
+                    if ((text.charAt(i) == '.' || text.charAt(i) == '!' || text.charAt(i) == '?') &&
+                            text.charAt(i - 1) != '.' && text.charAt(i - 1) != '!' && text.charAt(i - 1) != '?') {
+                        result++;
                     }
                 }
-                return "redirect:/result/The number of sentences: " + k;
-            }
-            case "paragraphs": {
-                text.setText(text.getText().trim());
-                int k = 0;
-                if (text.getText() != null) {
-                    k++;
-                    for (int i = 1; i < text.getText().length(); i++) {
-                        if (text.getText().charAt(i) == '\r' && text.getText().charAt(i - 1) != '\n') {
-                            k++;
+            case "paragraphs":
+                text = text.trim();
+                if (!text.equals("")) {
+                    result++;
+                    for (int i = 1; i < text.length(); i++) {
+                        if (text.charAt(i) == '\r' && text.charAt(i - 1) != '\n') {
+                            result++;
                         }
                     }
                 }
-                return "redirect:/result/The number of paragraphs: " + k;
-            }
         }
-        return "task014/404";
+        return "redirect:/result/" + operation + "/" + result;
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public String processGet(Model model){
-        model.addAttribute("text", new Text());
+    public String processGet(){
         return "task015/process";
     }
 }
