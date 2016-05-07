@@ -34,10 +34,10 @@
         <property name="cache" value="false"/>
     </bean>
 
-<!--    <bean id="viewResolver"
+    <bean id="viewResolver"
           class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
         <property name="order" value="1"/>
         <property name="basename" value="views"/>
-    </bean>-->
+    </bean>
 
 </beans>
