@@ -1,6 +1,7 @@
 package ru.kpfu.itis.nigmatullina.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,12 +13,15 @@ import ru.kpfu.itis.nigmatullina.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * Created by ramilanigmatullina on 08.05.16.
  */
 @Controller
 public class MyController {
+
+    private static BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 
     @Autowired
     UserService userService;
@@ -34,7 +38,7 @@ public class MyController {
 
         User user = new User();
         user.setUsername(username);
-        user.setPassword(password);
+        user.setPassword(bCryptPasswordEncoder.encode(password));
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setEmail(email);
@@ -48,9 +52,12 @@ public class MyController {
         return "profile";
     }
 
-    @RequestMapping(value = "/signin", method = RequestMethod.GET)
-    public String signin() {
-        return "signin";
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login(ModelMap model, @RequestParam(value = "error", required = false) boolean error) throws IOException {
+        if (error) {
+            model.addAttribute("error", error);
+        }
+        return "login";
     }
 
 }

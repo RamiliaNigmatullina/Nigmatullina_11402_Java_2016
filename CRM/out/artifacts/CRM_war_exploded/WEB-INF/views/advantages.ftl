@@ -57,7 +57,7 @@
                                 <li><a href="/forclients/callgager">Клиентам</a></li>
                             </ul>
                         </li>
-                        <li><a href="/signin">Вход</a></li>
+                        <li><a href="/login">Вход</a></li>
                         <li><a href="/join">Регистрация</a></li>
                     </ul>
                 </div>

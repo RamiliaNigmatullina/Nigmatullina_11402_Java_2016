@@ -57,7 +57,7 @@
                                 <li><a href="/forclients/callgager">Клиентам</a></li>
                             </ul>
                         </li>
-                        <li><a href="/signin">Вход</a></li>
+                        <li><a href="/login">Вход</a></li>
                         <li class="active"><a href="/join">Регистрация</a></li>
                     </ul>
                 </div>
@@ -115,7 +115,7 @@
                                            style="margin: 1px 0px 7px 0px" required/>
                                     <div style="text-align: center; margin-top: 5px">
                                         <input type="submit" id='reg' class="btn btn-theme"
-                                               style="margin: 1px 0px 7px 0px" value="Sigh up"/>
+                                               style="margin: 1px 0px 7px 0px" value="Зарегистрироваться"/>
                                     </div>
                                 </form>
                             </div>
