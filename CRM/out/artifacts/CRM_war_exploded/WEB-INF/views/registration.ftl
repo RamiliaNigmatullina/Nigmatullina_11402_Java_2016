@@ -90,12 +90,7 @@
                         </div>
                         <div class="panel-collapse collapse in">
                             <div class="panel-body">
-                            <#if back?? && back?has_content>
-                                <#assign param = "/join?back=" + back>
-                            <#else>
-                                <#assign param = "/join">
-                            </#if>
-                                <form method="post" action="${param?j_string}" class="form-signin" role="form">
+                                <form method="post" action="/join">
                                     <label for="username">Username:</label>
                                     <br>
                                     <div id="loginExists" style="color: red"></div>
@@ -106,13 +101,13 @@
                                     <div id="wrongPassword" style="color: red"></div>
                                     <input type="password" name="password" id="password" oninput="check_password()"
                                            class="form-control" style="margin: 1px 0px 7px 0px" required/>
-                                    <label for="first_name">First name:</label>
+                                    <label for="firstName">First name:</label>
                                     <br>
-                                    <input type="text" name="first_name" id="first_name" class="form-control"
+                                    <input type="text" name="firstName" id="firstName" class="form-control"
                                            style="margin: 1px 0px 7px 0px" required/>
-                                    <label for="last_name">Last name:</label>
+                                    <label for="lastName">Last name:</label>
                                     <br>
-                                    <input type="text" name="last_name" id="last_name" class="form-control"
+                                    <input type="text" name="lastName" id="lastName" class="form-control"
                                            style="margin: 1px 0px 7px 0px" required/>
                                     <label for="email">Email: </label>
                                     <br>

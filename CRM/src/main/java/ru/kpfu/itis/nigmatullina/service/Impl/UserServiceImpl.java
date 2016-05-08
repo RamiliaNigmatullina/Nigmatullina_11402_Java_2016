@@ -24,7 +24,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addUser(User user) {
-        userRepository.saveAndFlush(user);
+        //userRepository.saveAndFlush(user);
+        userRepository.save(user);
     }
 
     @Override
@@ -46,4 +47,5 @@ public class UserServiceImpl implements UserService {
     public User getByUsername(String username) {
         return userRepository.findOneByUsername(username);
     }
+
 }

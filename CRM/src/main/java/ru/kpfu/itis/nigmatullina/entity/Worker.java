@@ -39,7 +39,7 @@ public class Worker {
     private Role role;
 
     @Column(name = "phone_number")
-    private Integer phoneNumber;
+    private String phoneNumber;
 
     public Integer getId() {
         return id;
@@ -49,11 +49,11 @@ public class Worker {
         this.id = id;
     }
 
-    public String getWorkername() {
+    public String getUsername() {
         return username;
     }
 
-    public void setWorkername(String username) {
+    public void setUsername(String username) {
         this.username = username;
     }
 
@@ -105,11 +105,11 @@ public class Worker {
         this.role = role;
     }
 
-    public Integer getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }

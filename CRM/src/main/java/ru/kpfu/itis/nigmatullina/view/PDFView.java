@@ -5,14 +5,13 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.web.servlet.view.document.AbstractPdfView;
-
 import com.lowagie.text.Chunk;
 import com.lowagie.text.Document;
 import com.lowagie.text.FontFactory;
 import com.lowagie.text.Paragraph;
 import com.lowagie.text.pdf.PdfWriter;
 
+import org.springframework.web.servlet.view.document.AbstractPdfView;
 import ru.kpfu.itis.nigmatullina.entity.Door;
 
 /*
@@ -23,11 +22,12 @@ public class PDFView extends AbstractPdfView {
 
 
     @Override
-    protected void buildPdfDocument(Map<String, Object> map, Document document, PdfWriter pdfWriter, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
+    protected void buildPdfDocument(Map<String, Object> map, Document document, PdfWriter pdfWriter,
+                                    HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
         Door door = (Door) map.get("door");
 
         Paragraph header = new Paragraph(new Chunk("Generate Pdf USing Spring Mvc", FontFactory.getFont(FontFactory.HELVETICA, 30)));
-        Paragraph by = new Paragraph(new Chunk("Author " + door.getName() + " " + door.getDescription()));
+        Paragraph by = new Paragraph(new Chunk("Door: " + door.getName() + " " + door.getDescription()));
 
         document.add(header);
         document.add(by);

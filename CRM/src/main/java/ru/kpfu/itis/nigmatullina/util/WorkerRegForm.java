@@ -5,12 +5,10 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.Size;
 
-
 /**
  * Created by ramilanigmatullina on 04.05.16.
  */
-public class UserRegForm {
-
+public class WorkerRegForm {
     @NotEmpty(message = "Поле должно быть заполнено")
     private String username;
 
@@ -27,6 +25,9 @@ public class UserRegForm {
     @NotEmpty(message = "Поле должно быть заполнено")
     @Email(message = "Некорректный email")
     private String email;
+
+    @NotEmpty(message = "Поле должно быть заполнено")
+    private String phoneNumber;
 
     public String getUsername() {
         return username;
@@ -66,5 +67,13 @@ public class UserRegForm {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }
