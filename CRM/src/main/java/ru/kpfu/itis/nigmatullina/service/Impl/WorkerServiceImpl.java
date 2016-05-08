@@ -1,6 +1,7 @@
 package ru.kpfu.itis.nigmatullina.service.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.kpfu.itis.nigmatullina.entity.Worker;
 import ru.kpfu.itis.nigmatullina.repository.WorkerRepository;
 import ru.kpfu.itis.nigmatullina.service.WorkerService;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * Created by ramilanigmatullina on 04.05.16.
  */
+@Service
 public class WorkerServiceImpl implements WorkerService {
 
     @Autowired

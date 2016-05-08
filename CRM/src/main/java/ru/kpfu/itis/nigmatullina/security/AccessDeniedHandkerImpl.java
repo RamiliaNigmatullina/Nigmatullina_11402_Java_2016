@@ -1,0 +1,19 @@
+package ru.kpfu.itis.nigmatullina.security;
+
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.web.access.AccessDeniedHandler;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+/**
+ * Created by ramilanigmatullina on 08.05.16.
+ */
+public class AccessDeniedHandkerImpl implements AccessDeniedHandler {
+    @Override
+    public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e) throws IOException, ServletException {
+        response.sendRedirect("/403");
+    }
+}
