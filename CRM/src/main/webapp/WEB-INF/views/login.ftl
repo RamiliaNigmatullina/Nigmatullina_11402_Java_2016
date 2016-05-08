@@ -25,45 +25,7 @@
 </head>
 <body>
 <div id="wrapper">
-    <!-- start header -->
-    <header>
-        <div class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/home"><span>Z</span>etta</a>
-                </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/catalog">Каталог</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">О компании<b class=" icon-angle-down"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/company/info">Информация</a></li>
-                                <li><a href="/company/career">Карьера</a></li>
-                                <li><a href="/company/guarantee">Гарантия</a></li>
-                                <li><a href="/company/mission">Миссия</a></li>
-                                <li><a href="/company/advantages">Преимущества</a></li>
-                                <li><a href="/company/manufacture">Производство</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Клиентам<b class=" icon-angle-down"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/forclients/callgager">Клиентам</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/login">Вход</a></li>
-                        <li class="active"><a href="/join">Регистрация</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
+    <#include "header.ftl">
     <section id="inner-headline">
         <div class="container">
             <div class="row">
@@ -99,8 +61,8 @@
                                         <input type="text" class="form-control" name="username" id="username" style="margin: 1px 0px 7px 0px" required autofocus/>
                                         <label for='password' style="margin-top: 5px">Пароль:</label><br>
                                         <input type="password" name="password" id="password" class="form-control" style="margin: 1px 0px 7px 0px" required/>
-                                        <input type="checkbox" name="remember-me" id="remember-me" style="margin: 1px 0px 7px 0px" checked/>
-                                        <label for="remember-me">Запомнить меня</label><br>
+                                        <#--<input type="checkbox" name="remember-me" id="remember-me" style="margin: 1px 0px 7px 0px" checked/>
+                                        <label for="remember-me">Запомнить меня</label><br>-->
                                         <div style="text-align: center; margin-top: 5px">
                                             <input type="submit" id='reg' class="btn btn-theme" style="margin: 1px 0px 7px 0px" value="Войти"/>
                                         </div>

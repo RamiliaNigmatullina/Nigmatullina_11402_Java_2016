@@ -25,46 +25,7 @@
 </head>
 <body>
 <div id="wrapper">
-    <!-- start header -->
-    <header>
-        <div class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/home"><span>Z</span>etta</a>
-                </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/catalog">Клиентам</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">О компании<b class=" icon-angle-down"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/company/info">Информация</a></li>
-                                <li><a href="/company/career">Карьера</a></li>
-                                <li><a href="/company/guarantee">Гарантия</a></li>
-                                <li><a href="/company/mission">Миссия</a></li>
-                                <li><a href="/company/advantages">Преимущества</a></li>
-                                <li><a href="/company/manufacture">Производство</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Клиентам<b class=" icon-angle-down"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/forclients/callgager">Клиентам</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/signin">Вход</a></li>
-                        <li><a href="/join">Регистрация</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- end header -->
+    <#include "header.ftl">
     <section id="inner-headline">
         <div class="container">
             <div class="row">
@@ -78,66 +39,7 @@
             </div>
         </div>
     </section>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="widget">
-                        <h5 class="widgetheading">О компании</h5>
-                        <ul class="link-list">
-                            <li><a href="/company/info">Информация</a></li>
-                            <li><a href="/company/career">Карьера</a></li>
-                            <li><a href="/company/guarantee">Гарантия</a></li>
-                            <li><a href="/company/mission">Миссия</a></li>
-                            <li><a href="/company/advantages">Преимущества</a></li>
-                            <li><a href="/company/manufacture">Производство</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="widget">
-                        <h5 class="widgetheading">Каталог</h5>
-                        <ul class="link-list">
-                            <li><a href="#">Шкафы</a></li>
-                            <li><a href="#">Столы</a></li>
-                            <li><a href="#">Стулья</a></li>
-                            <li><a href="#">Ножки</a></li>
-                            <li><a href="#">Кухни</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="widget">
-                        <h5 class="widgetheading">Клиентам</h5>
-                        <ul class="link-list">
-                            <li><a href="#">Вызов замерщика</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="widget">
-                        <h5 class="widgetheading">Свяжитесь с нами</h5>
-                        <p>Email: zetta@gmail.com</p>
-                        <p>Телефон: 8 (495) 133-95-50</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="sub-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="copyright">
-                            <p>
-                                <span>&copy; Copyright © 2016 Zetta. All rights reserved. </span> <a href="http://bootstraptaste.com/">Bootstrap Themes</a> by BootstrapTaste
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <#include "footer.ftl">
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript

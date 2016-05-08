@@ -44,18 +44,13 @@ public class MyController {
         user.setEmail(email);
         user.setRole(Role.ROLE_USER);
         userService.addUser(user);
-        return "profile";
-    }
-
-    @RequestMapping(value = "/profile", method = RequestMethod.GET)
-    public String profile() {
-        return "profile";
+        return "login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(ModelMap model, @RequestParam(value = "error", required = false) boolean error) throws IOException {
         if (error) {
-            model.addAttribute("error", error);
+            model.addAttribute("error", "Неверный пароль или логин");
         }
         return "login";
     }
