@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="breadcrumb">
-                        <li class="active">Create account</li>
+                        <li class="active">Регистрация</li>
                     </ul>
                 </div>
             </div>
@@ -47,27 +47,27 @@
                     <div class="panel panel-default" style="vertical-align: middle;">
                         <div class="panel-heading">
                             <h2 class="panel-title" style="text-align: center;">
-                                <b>Create account</b>
+                                <b>Регистрация</b>
                             </h2>
                         </div>
                         <div class="panel-collapse collapse in">
                             <div class="panel-body">
                                 <form method="post" action="/join">
-                                    <label for="username">Username:</label>
+                                    <label for="username">Логин:</label>
                                     <br>
                                     <div id="loginExists" style="color: red"></div>
                                     <input type="text" name="username" id="username" oninput="check_login()"
                                            class="form-control" style="margin: 1px 0px 7px 0px" required autofocus/>
-                                    <label for="password">Password:</label>
+                                    <label for="password">Пароль:</label>
                                     <br>
                                     <div id="wrongPassword" style="color: red"></div>
                                     <input type="password" name="password" id="password" oninput="check_password()"
                                            class="form-control" style="margin: 1px 0px 7px 0px" required/>
-                                    <label for="firstName">First name:</label>
+                                    <label for="firstName">Имя:</label>
                                     <br>
                                     <input type="text" name="firstName" id="firstName" class="form-control"
                                            style="margin: 1px 0px 7px 0px" required/>
-                                    <label for="lastName">Last name:</label>
+                                    <label for="lastName">Фамилия:</label>
                                     <br>
                                     <input type="text" name="lastName" id="lastName" class="form-control"
                                            style="margin: 1px 0px 7px 0px" required/>
@@ -88,7 +88,6 @@
         </div>
     </div>
 </div>
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

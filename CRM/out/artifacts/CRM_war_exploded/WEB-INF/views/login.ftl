@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="breadcrumb">
-                        <li class="active">Create account</li>
+                        <li class="active">Вход</li>
                     </ul>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                                 <form method="post" action="/login/process">
                                     <fieldset>
                                     <#if error??>
-                                        <p style='color: red'>Неверный логин или пароль.</p>
+                                        <p style='color: red'>Неверный логин или пароль</p>
                                     </#if>
                                         <label for='login'>Логин:</label><br>
                                         <input type="text" class="form-control" name="username" id="username" style="margin: 1px 0px 7px 0px" required autofocus/>

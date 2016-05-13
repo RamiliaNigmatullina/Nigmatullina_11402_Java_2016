@@ -36,7 +36,7 @@ public class CatalogController {
     WallCabinetService wallCabinetService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String portfolio(Model model) {
+    public String catalog(Model model) {
         model.addAttribute("base_cabinets", baseCabinetService.getAll());
         model.addAttribute("cabinets_for_built_in_appliances", cabinetForBuiltInAppliancesService.getAll());
         model.addAttribute("doors", doorService.getAll());

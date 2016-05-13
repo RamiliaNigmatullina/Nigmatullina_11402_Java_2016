@@ -57,7 +57,7 @@
                                 <p>Артикул: ${item.articleNumber}</p>
                                 <h4>Главные черты</h4>
                                 <p>${item.keyFeatures}</p>
-                            <p>
+                                <p>
                                 <b>Параметры:</b><br>
                                 <#if item.width?? && item.width?has_content>
                                     Ширина: ${item.width} см.<br>
@@ -86,7 +86,23 @@
                                 </p>
                             </#if>
                             <@security.authorize access="isAuthenticated()">
-                                <li><a href="#">Добавить в корзину</a></li>
+                                <#if success?? && success?has_content>
+                                    <div>
+                                        <p style="color: #3f8d15">${success}</p>
+                                    </div>
+                                </#if>
+                                <#assign path_to_add_item = "/basket/add/" + category + "/" + item.id >
+                            <div class="col-lg-6">
+                                <form method="post" action="${path_to_add_item}">
+                                    <fieldset>
+                                        <label for='amount'>Количество:</label>
+                                        <input type="text" class="form-control" name="amount" id="amount" style="margin: 1px 0px 7px 0px" value="1" required/>
+                                        <div style="text-align: center; margin-top: 5px">
+                                            <input type="submit" id='reg' class="btn btn-theme" style="margin: 1px 0px 7px 0px" value="Добавить в корзину"/>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                                </div>
                             </@security.authorize>
                         </div>
                     </aside>

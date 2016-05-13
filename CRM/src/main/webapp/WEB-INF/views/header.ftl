@@ -25,18 +25,15 @@
                             <li><a href="/company/manufacture">Производство</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Клиентам<b class=" icon-angle-down"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/forclients/callgager">Клиентам</a></li>
-                        </ul>
-                    </li>
+                <@security.authorize ifAnyGranted="ROLE_USER">
+                    <li><a href="/basket">Корзина</a></li>
+                    <li><a href="/user/profile">Моя страница</a></li>
+                </@security.authorize>
                 <@security.authorize ifAnyGranted="ROLE_ANONYMOUS">
                     <li><a href="/login">Вход</a></li>
                     <li><a href="/join">Регистрация</a></li>
                 </@security.authorize>
                 <@security.authorize access="isAuthenticated()">
-                    <li><a href="/user/profile">Моя страница</a></li>
                     <li><a href="/logout">Выход</a></li>
                 </@security.authorize>
                 </ul>
