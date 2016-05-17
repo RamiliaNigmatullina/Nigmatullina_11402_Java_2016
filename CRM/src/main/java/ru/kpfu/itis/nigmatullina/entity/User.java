@@ -34,6 +34,21 @@ public class User {
     @Column(name = "information")
     private String information;
 
+    @Column(name = "phone_number")
+    private String phoneNumber;
+
+    @Column(name = "credit_card_number")
+    private String creditCardNumber;
+
+    @Column(name = "postcode")
+    private Integer postcode;
+
+    @Column(name = "passport_id")
+    private String passportID;
+
+    @Column(name = "address")
+    private String address;
+
     @Column(name = "role")
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -92,6 +107,46 @@ public class User {
 
     public void setInformation(String information) {
         this.information = information;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getCreditCardNumber() {
+        return creditCardNumber;
+    }
+
+    public void setCreditCardNumber(String creditCardNumber) {
+        this.creditCardNumber = creditCardNumber;
+    }
+
+    public Integer getPostcode() {
+        return postcode;
+    }
+
+    public void setPostcode(Integer postcode) {
+        this.postcode = postcode;
+    }
+
+    public String getPassportID() {
+        return passportID;
+    }
+
+    public void setPassportID(String passportID) {
+        this.passportID = passportID;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public Role getRole() {

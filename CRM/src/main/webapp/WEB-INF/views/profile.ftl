@@ -54,6 +54,21 @@
                         <#if user.email?? && user.email?has_content>
                             <p style="padding-left: 5px"><b>Email</b>: ${user.email}</p>
                         </#if>
+                        <#if user.phoneNumber?? && user.phoneNumber?has_content>
+                            <p style="padding-left: 5px"><b>Телефон</b>: ${user.phoneNumber}</p>
+                        </#if>
+                        <#if user.creditCardNumber?? && user.creditCardNumber?has_content>
+                            <p style="padding-left: 5px"><b>Номер карты:</b>: ${user.creditCardNumber}</p>
+                        </#if>
+                        <#if user.postcode?? && user.postcode?has_content>
+                            <p style="padding-left: 5px"><b>Почтовый индекс</b>: ${user.postcode}</p>
+                        </#if>
+                        <#if user.passportID?? && user.passportID?has_content>
+                            <p style="padding-left: 5px"><b>Серия и номер паспорта</b>: ${user.passportID}</p>
+                        </#if>
+                        <#if user.address?? && user.address?has_content>
+                            <p style="padding-left: 5px"><b>Адрес</b>: ${user.address}</p>
+                        </#if>
                         <#if user.information?? && user.information?has_content>
                             <p style="padding-left: 5px"><b>Информация</b>: ${user.information}</p>
                         </#if>
@@ -67,7 +82,6 @@
     </div>
     <#include "footer.ftl">
 </div>
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

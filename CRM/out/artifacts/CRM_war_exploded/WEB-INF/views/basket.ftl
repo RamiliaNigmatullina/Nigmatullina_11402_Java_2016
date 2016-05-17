@@ -58,12 +58,7 @@
                 <#list allItemsView as itemView>
                     <tr style="margin: 1px; border: 1px solid black">
                     <#list itemView as inf>
-
-                        <#if inf == "style_centre">
-                            <td align="center" style="padding: 3px; margin: 1px; border: 1px solid black">${inf}${inf}</td>
-                        <#else>
-                            <td style="padding: 3px; margin: 1px; border: 1px solid black">${inf}</td>
-                        </#if>
+                        <td style="padding: 3px; margin: 1px; border: 1px solid black">${inf}</td>
                     </#list>
                         <#--<#assign delete_item="/basket/delete_item/" + user_id + "/" +/>-->
                         <#--<td style="padding: 3px; margin: 1px; border: 1px solid black"><a href="${url}">Удалить</a></td>-->

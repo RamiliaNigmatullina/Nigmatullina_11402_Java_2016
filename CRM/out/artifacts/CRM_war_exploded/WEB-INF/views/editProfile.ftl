@@ -43,6 +43,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
                 <div id="res"></div>
+                <br>
                 <form method="post" action="/user/editprofile" role="form">
                     <h4 style="text-align: center">Личная информаця</h4>
                     <br>
@@ -63,6 +64,56 @@
                             <td style="width: 30%; text-align: right; padding-right: 20px"><label for="email">Email:</label></td>
                             <td style="width: 40%">
                                 <input type="text" name="email" id="email" class="form-control" value="${user.email}" style="margin: 1px 0px 7px 0px" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%; text-align: right; padding-right: 20px"><label for="phoneNumber">Телефон:</label></td>
+                            <td style="width: 40%">
+                            <#if user.phoneNumber?? && user.phoneNumber?has_content>
+                                <input type="text" name="phoneNumber" id="phoneNumber" class="form-control" style="margin: 1px 0px 7px 0px" value="${user.phoneNumber}" />
+                            <#else>
+                                <input type="text" name="phoneNumber" id="phoneNumber" class="form-control" style="margin: 1px 0px 7px 0px"/>
+                            </#if>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%; text-align: right; padding-right: 20px"><label for="creditCardNumber">Номер карты:</label></td>
+                            <td style="width: 40%">
+                            <#if user.creditCardNumber?? && user.creditCardNumber?has_content>
+                                <input type="text" name="creditCardNumber" id="creditCardNumber" class="form-control" style="margin: 1px 0px 7px 0px" value="${user.creditCardNumber}"/>
+                            <#else>
+                                <input type="text" name="creditCardNumber" id="creditCardNumber" class="form-control" style="margin: 1px 0px 7px 0px"/>
+                            </#if>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%; text-align: right; padding-right: 20px"><label for="postcode">Почтовый индекс:</label></td>
+                            <td style="width: 40%">
+                            <#if user.postcode?? && user.postcode?has_content>
+                                <input type="text" name="postcode" id="postcode" class="form-control" style="margin: 1px 0px 7px 0px" value="${user.postcode}"/>
+                            <#else>
+                                <input type="text" name="postcode" id="postcode" class="form-control" style="margin: 1px 0px 7px 0px"/>
+                            </#if>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%; text-align: right; padding-right: 20px"><label for="passportID">Серия и номер паспорта:</label></td>
+                            <td style="width: 40%">
+                            <#if user.passportID?? && user.passportID?has_content>
+                                <input type="text" name="passportID" id="passportID" class="form-control" style="margin: 1px 0px 7px 0px" value="${user.passportID}"/>
+                            <#else>
+                                <input type="text" name="passportID" id="passportID" class="form-control" style="margin: 1px 0px 7px 0px"/>
+                            </#if>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%; text-align: right; padding-right: 20px"><label for="address">Адрес:</label></td>
+                            <td style="width: 40%">
+                            <#if user.address?? && user.address?has_content>
+                                <input type="text" name="address" id="address" class="form-control" style="margin: 1px 0px 7px 0px" value="${user.address}"/>
+                            <#else>
+                                <input type="text" name="address" id="address" class="form-control" style="margin: 1px 0px 7px 0px"/>
+                            </#if>
                             </td>
                         </tr>
                         <tr>

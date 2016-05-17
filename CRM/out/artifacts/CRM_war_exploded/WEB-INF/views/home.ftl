@@ -62,7 +62,7 @@
 
 	<div>
         <h1>Generate / Render Pdf Using Spring Mvc</h1>
-        <a href="/generate/pdf.htm">Generate Pdf</a>
+        <a href="generate/pdf.htm">Generate Pdf</a>
 	</div>
 
 

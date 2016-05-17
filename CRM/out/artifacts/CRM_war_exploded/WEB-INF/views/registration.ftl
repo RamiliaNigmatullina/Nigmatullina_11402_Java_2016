@@ -13,7 +13,6 @@
     <link href="/css/flexslider.css" rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet" />
 
-
     <!-- Theme skin -->
     <link href="/skins/default.css" rel="stylesheet" />
 
@@ -103,5 +102,6 @@
 <script src="/js/animate.js"></script>
 <script src="/js/custom.js"></script>
 <script src="/js/validate.js"></script>
+<script src="/js/check.js"></script>
 </body>
 </html>

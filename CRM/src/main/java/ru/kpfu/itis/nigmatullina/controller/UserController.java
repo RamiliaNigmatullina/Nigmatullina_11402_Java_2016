@@ -35,17 +35,32 @@ public class UserController {
     }
 
     @RequestMapping(value = "/editprofile", method = RequestMethod.POST)
-    public String editProfile(ModelMap model,
-                              @RequestParam(value = "firstName", required = true) String firstName,
+    public String editProfile(@RequestParam(value = "firstName", required = true) String firstName,
                               @RequestParam(value = "lastName", required = true) String lastName,
                               @RequestParam(value = "email", required = true) String email,
-                              @RequestParam(value = "information", required = true) String information) {
+                              @RequestParam(value = "phoneNumber") String phoneNumber,
+                              @RequestParam(value = "creditCardNumber") String creditCardNumber,
+                              @RequestParam(value = "postcode") Integer postcode,
+                              @RequestParam(value = "passportID") String passportID,
+                              @RequestParam(value = "address") String address,
+                              @RequestParam(value = "information") String information) {
 
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setEmail(email);
-        user.setInformation(information);
+        if (information != null)
+            user.setInformation(information);
+        if (information != null)
+            user.setPhoneNumber(phoneNumber);
+        if (information != null)
+            user.setCreditCardNumber(creditCardNumber);
+        if (information != null)
+            user.setPostcode(postcode);
+        if (information != null)
+            user.setPassportID(passportID);
+        if (information != null)
+            user.setAddress(address);
         userService.editUser(user);
         return "redirect:profile";
     }
