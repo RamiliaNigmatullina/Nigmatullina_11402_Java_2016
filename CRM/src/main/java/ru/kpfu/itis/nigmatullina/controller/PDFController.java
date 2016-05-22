@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import ru.kpfu.itis.nigmatullina.entity.Door;
 import ru.kpfu.itis.nigmatullina.service.DoorService;
 
 /**
@@ -20,16 +19,6 @@ public class PDFController {
 
     @RequestMapping(value = "/generate/pdf.htm", method = RequestMethod.GET)
     ModelAndView generatePdf() throws Exception {
-        System.out.println("Calling generatePdf()...");
-
-
-        Door door = doorService.getById(1);
-
-/*        Employee employee = new Employee();
-        employee.setFirstName("Yashwant");
-        employee.setLastName("Chavan");
-        */
-
-        return new ModelAndView("pdfView", "door", door);
+        return new ModelAndView("pdfView");
     }
 }

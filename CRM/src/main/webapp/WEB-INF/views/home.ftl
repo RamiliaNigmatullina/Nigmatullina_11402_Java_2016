@@ -60,14 +60,6 @@
     </div>
     <!-- end slider -->
 
-	<div>
-        <h1>Generate / Render Pdf Using Spring Mvc</h1>
-        <a href="generate/pdf.htm">Generate Pdf</a>
-	</div>
-
-
-
-
     </section>
 	<section class="callaction">
 	<div class="container">
@@ -114,7 +106,7 @@
 									
 							</div>
 							<div class="box-bottom">
-								<a href="#">Подробнее</a>
+								<a href="/catalog">Подробнее</a>
 							</div>
 						</div>
 					</div>
@@ -129,7 +121,7 @@
 									
 							</div>
 							<div class="box-bottom">
-								<a href="#">Подробнее</a>
+								<a href="/catalog">Подробнее</a>
 							</div>
 						</div>
 					</div>
@@ -144,7 +136,7 @@
 									
 							</div>
 							<div class="box-bottom">
-								<a href="#">Подробнее</a>
+								<a href="/catalog">Подробнее</a>
 							</div>
 						</div>
 					</div>
@@ -159,7 +151,7 @@
 
                             </div>
                             <div class="box-bottom">
-                                <a href="#">Подробнее</a>
+                                <a href="/catalog">Подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -181,6 +173,10 @@
 				</div>
 			</div>
 		</div>
+
+        <div>
+            <a href="generate/pdf.htm" target="_blank">Скачать информацию</a>
+        </div>
 		<!-- divider -->
 		<div class="row">
 			<div class="col-lg-12">

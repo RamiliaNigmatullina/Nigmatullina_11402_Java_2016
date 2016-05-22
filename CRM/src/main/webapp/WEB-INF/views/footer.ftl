@@ -39,6 +39,7 @@
                     <h5 class="widgetheading">Свяжитесь с нами</h5>
                     <p>Email: zetta@gmail.com</p>
                     <p>Телефон: 8 (495) 133-95-50</p>
+                    <a href="generate/pdf.htm" target="_blank">Скачать информацию</a>
                 </div>
             </div>
         </div>
