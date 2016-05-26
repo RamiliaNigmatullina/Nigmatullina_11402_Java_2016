@@ -34,7 +34,7 @@ public class UserTest {
         userServiceImpl = new UserServiceImpl();
         UserRepository userRepository = mock(UserRepository.class);
 
-        when(userRepository.findById(user.getId())).thenReturn(user);
+        when(userRepository.findOne(user.getId())).thenReturn(user);
         when(userRepository.findOneByUsername(user.getUsername())).thenReturn(user);
 
     }

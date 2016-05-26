@@ -19,6 +19,24 @@ function check_password() {
     }
 }
 
+function check_postcode() {
+    var regex = /([0-9]+)/;
+    var reg = document.getElementById("wrPostcode");
+    if ($("#postcode").val().length > 0) {
+        if (!$("#postcode").val().match(regex)) {
+            $.ajax({
+                success: function (resp) {
+                    $("#wrongPostcode").text("Почтовый индекс должен содержать только цифры.")
+                    reg.disabled = true;
+                }
+            });
+        } else {
+            $("#wrongPostcode").text("")
+            reg.disabled = false;
+        }
+    }
+}
+
 
 function check_login(request, response) {
     var reg = document.getElementById("reg");

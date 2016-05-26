@@ -13,7 +13,6 @@
 <link href="/css/flexslider.css" rel="stylesheet" />
 <link href="/css/style.css" rel="stylesheet" />
 
-
 <!-- Theme skin -->
 <link href="/skins/default.css" rel="stylesheet" />
 
@@ -21,6 +20,39 @@
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <style>
+        <!--
+        /* наша HTML таблица */
+        table.sort{
+            border-spacing:0.1em;
+            margin-bottom:1em;
+            margin-top:1em
+        }
+
+        /* ячейки таблицы */
+        table.sort td{
+            border:1px solid #CCCCCC;
+            padding:0.3em 1em
+        }
+
+        /* заголовки таблицы */
+        table.sort thead td{
+            cursor:pointer;
+            cursor:hand;
+            font-weight:bold;
+            text-align:center;
+            vertical-align:middle
+        }
+
+        /* заголовок отсортированного столбца */
+        table.sort thead td.curcol{
+            /*background-color:#CCCCCC;*/
+            color:#000000
+        }
+        -->
+    </style>
+
 
 </head>
 <body>
@@ -46,15 +78,18 @@
                     <h2 style="text-align: center">Моя корзина</h2>
                     <h3 style="text-align: center">Товары</h3>
                 </div>
-                <table style="border-collapse: collapse; border: 1px solid black;">
+                <#if allItemsView?? && allItemsView?has_content>
+                <table style="border-collapse: collapse; border: 1px solid black;" class="sort" align="center">
+                    <thead>
 					<tr">
-						<td align="center" style="padding: 3px; margin: 1px; border: 1px solid black">Наименование</td>
 						<td align="center" style="padding: 3px; margin: 1px; border: 1px solid black">Артикул</td>
+						<td align="center" style="padding: 3px; margin: 1px; border: 1px solid black">Наименование</td>
 						<td align="center" style="padding: 3px; margin: 1px; border: 1px solid black">Описание</td>
 						<td align="center" style="padding: 3px; margin: 1px; border: 1px solid black">Кол-во</td>
 						<td align="center" style="padding: 3px; margin: 1px; border: 1px solid black">Цена (руб)</td>
 					</tr>
-
+                    </thead>
+                    <tbody>
                 <#list allItemsView as itemView>
                     <tr style="margin: 1px; border: 1px solid black">
                     <#list itemView as inf>
@@ -64,7 +99,11 @@
                         <#--<td style="padding: 3px; margin: 1px; border: 1px solid black"><a href="${url}">Удалить</a></td>-->
                     </tr>
                 </#list>
+                    </tbody>
 				</table>
+                <#else>
+                <p>В корзине нет товаров</p>
+                </#if>
             </div>
         </div>
     </div>
@@ -85,5 +124,6 @@
 <script src="/js/jquery.flexslider.js"></script>
 <script src="/js/animate.js"></script>
 <script src="/js/custom.js"></script>
+<script src="/js/sort.js"></script>
 </body>
 </html>

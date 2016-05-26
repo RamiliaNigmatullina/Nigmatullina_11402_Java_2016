@@ -77,6 +77,15 @@
                     <a href="/user/editprofile" class="btn btn-md btn-link">Редактировать</a>
                 </div>
             </#if>
+            <@security.authorize ifAnyGranted="ROLE_USER">
+                <p>Если вы работаете в магазине, то вы можете подать заявку на то, чтобы вас добавили в менеджеры.</p>
+                <#if user.wantBeManager >
+                    <a href="/user/inotmanager" class="btn btn-md btn-link">Отменить заявку</a>
+                <#else>
+                    <a href="/user/imanager" class="btn btn-md btn-link">Подать заявку</a>
+                </#if>
+            </@security.authorize>
+
             </div>
         </div>
     </div>

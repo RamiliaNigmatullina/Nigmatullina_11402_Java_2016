@@ -49,10 +49,10 @@ public class AuthProviderImpl implements AuthenticationProvider {
         String password = authentication.getCredentials().toString();
 
         User user = userRepository.findOneByUsername(username);
-        Worker worker = workerRepository.findOneByUsername(username);
-        Admin admin = adminRepository.findOneByUsername(username);
+        //Worker worker = workerRepository.findOneByUsername(username);
+        //Admin admin = adminRepository.findOneByUsername(username);
 
-        if (user == null && worker == null && admin == null)
+        /*if (user == null && worker == null && admin == null)
             throw new UsernameNotFoundException("Пользователя с таким именем не существует");
 
         if (user != null) {
@@ -76,7 +76,17 @@ public class AuthProviderImpl implements AuthenticationProvider {
         }else {
             authorities.add(new SimpleGrantedAuthority(admin.getRole().toString()));
             return new UsernamePasswordAuthenticationToken(admin, null, authorities);
-        }
+        }*/
+
+        if (user == null)
+            throw new UsernameNotFoundException("Пользователя с таким именем не существует");
+
+        else if (!encoder.matches(password, user.getPassword()))
+            throw new BadCredentialsException("Неверный пароль");
+
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority(user.getRole().toString()));
+        return new UsernamePasswordAuthenticationToken(user, null, authorities);
     }
 
     @Override

@@ -166,7 +166,7 @@
 
                             </div>
                             <div class="box-bottom">
-                                <a href="#">Подробнее</a>
+                                <a href="/user/callgager">Подробнее</a>
                             </div>
                         </div>
                     </div>

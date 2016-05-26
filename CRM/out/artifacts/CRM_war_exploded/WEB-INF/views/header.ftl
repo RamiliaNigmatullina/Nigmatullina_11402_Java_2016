@@ -25,7 +25,13 @@
                             <li><a href="/company/manufacture">Производство</a></li>
                         </ul>
                     </li>
-                <@security.authorize ifAnyGranted="ROLE_USER">
+                <@security.authorize ifAnyGranted="ROLE_ADMIN">
+                    <li><a href="/admin/addtomanager">Заявки пользователей</a></li>
+                </@security.authorize>
+                <@security.authorize ifAnyGranted="ROLE_WORKER">
+                    <li><a href="/worker/todo">Заявки</a></li>
+                </@security.authorize>
+                <@security.authorize access="isAuthenticated()">
                     <li><a href="/basket">Корзина</a></li>
                     <li><a href="/user/profile">Моя страница</a></li>
                 </@security.authorize>

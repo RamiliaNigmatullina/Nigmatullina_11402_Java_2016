@@ -33,7 +33,7 @@ public class MyController {
 
 
     @RequestMapping(value = "/join", method = RequestMethod.POST)
-    public String regPost(ModelMap modelMap, @RequestParam String username, @RequestParam String password,
+    public String regPost(@RequestParam String username, @RequestParam String password,
                         @RequestParam String firstName, @RequestParam String lastName, @RequestParam String email) {
 
         User user = new User();
@@ -42,6 +42,7 @@ public class MyController {
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setEmail(email);
+        user.setWantBeManager(false);
         user.setRole(Role.ROLE_USER);
         userService.addUser(user);
         return "login";
@@ -54,5 +55,4 @@ public class MyController {
         }
         return "login";
     }
-
 }

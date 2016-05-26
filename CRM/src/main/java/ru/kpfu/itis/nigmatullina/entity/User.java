@@ -49,6 +49,9 @@ public class User {
     @Column(name = "address")
     private String address;
 
+    @Column(name = "wantbemanager", nullable = false)
+    private boolean wantBeManager;
+
     @Column(name = "role")
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -147,6 +150,14 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public boolean isWantBeManager() {
+        return wantBeManager;
+    }
+
+    public void setWantBeManager(boolean wantBeManager) {
+        this.wantBeManager = wantBeManager;
     }
 
     public Role getRole() {

@@ -76,10 +76,13 @@
                             </#if>
                             </td>
                         </tr>
+
                         <tr>
                             <td style="width: 30%; text-align: right; padding-right: 20px"><label for="creditCardNumber">Номер карты:</label></td>
+                            <#--<td><div id="wrongCreditCardNumber" style="color: red"></div></td>-->
                             <td style="width: 40%">
                             <#if user.creditCardNumber?? && user.creditCardNumber?has_content>
+                                <#--oninput="creditCardNumber()"-->
                                 <input type="text" name="creditCardNumber" id="creditCardNumber" class="form-control" style="margin: 1px 0px 7px 0px" value="${user.creditCardNumber}"/>
                             <#else>
                                 <input type="text" name="creditCardNumber" id="creditCardNumber" class="form-control" style="margin: 1px 0px 7px 0px"/>
@@ -88,6 +91,7 @@
                         </tr>
                         <tr>
                             <td style="width: 30%; text-align: right; padding-right: 20px"><label for="postcode">Почтовый индекс:</label></td>
+                            <#--<div id="wrPostcode" style="color: red"></div>-->
                             <td style="width: 40%">
                             <#if user.postcode?? && user.postcode?has_content>
                                 <input type="text" name="postcode" id="postcode" class="form-control" style="margin: 1px 0px 7px 0px" value="${user.postcode}"/>
@@ -152,5 +156,6 @@
 <script src="/js/jquery.flexslider.js"></script>
 <script src="/js/animate.js"></script>
 <script src="/js/custom.js"></script>
+<script src="/js/check.js"></script>
 </body>
 </html>

@@ -54,7 +54,7 @@
                                 <form method="post" action="/join">
                                     <label for="username">Логин:</label>
                                     <br>
-                                    <div id="loginExists" style="color: red"></div>
+                                    <#--<div id="loginExists" style="color: red"></div>-->
                                     <input type="text" name="username" id="username" oninput="check_login()"
                                            class="form-control" style="margin: 1px 0px 7px 0px" required autofocus/>
                                     <label for="password">Пароль:</label>

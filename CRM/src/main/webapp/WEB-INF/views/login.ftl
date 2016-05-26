@@ -61,8 +61,8 @@
                                         <input type="text" class="form-control" name="username" id="username" style="margin: 1px 0px 7px 0px" required autofocus/>
                                         <label for='password' style="margin-top: 5px">Пароль:</label><br>
                                         <input type="password" name="password" id="password" class="form-control" style="margin: 1px 0px 7px 0px" required/>
-                                        <#--<input type="checkbox" name="remember-me" id="remember-me" style="margin: 1px 0px 7px 0px" checked/>
-                                        <label for="remember-me">Запомнить меня</label><br>-->
+                                        <input type="checkbox" name="remember-me" id="remember-me" style="margin: 1px 0px 7px 0px" checked/>
+                                        <label for="remember-me">Запомнить меня</label><br>
                                         <div style="text-align: center; margin-top: 5px">
                                             <input type="submit" id='reg' class="btn btn-theme" style="margin: 1px 0px 7px 0px" value="Войти"/>
                                         </div>

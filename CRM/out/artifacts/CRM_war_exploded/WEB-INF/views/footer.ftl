@@ -18,11 +18,12 @@
                 <div class="widget">
                     <h5 class="widgetheading">Каталог</h5>
                     <ul class="link-list">
-                        <li><a href="#">Шкафы</a></li>
-                        <li><a href="#">Столы</a></li>
-                        <li><a href="#">Стулья</a></li>
-                        <li><a href="#">Ножки</a></li>
-                        <li><a href="#">Кухни</a></li>
+                        <li><a href="/catalog">Напольные шкафы</a></li>
+                        <li><a href="/catalog">Шкафы для встраиваемой техники</a></li>
+                        <li><a href="/catalog">Фронтальные панели</a></li>
+                        <li><a href="/catalog">Высокие шкафы</a></li>
+                        <li><a href="/catalog">Навесные шкафы</a></li>
+                        <li><a href="/catalog">Ножки</a></li>
                     </ul>
                 </div>
             </div>
@@ -30,7 +31,12 @@
                 <div class="widget">
                     <h5 class="widgetheading">Клиентам</h5>
                     <ul class="link-list">
-                        <li><a href="#">Вызов замерщика</a></li>
+                    <@security.authorize ifAnyGranted="ROLE_USER">
+                        <li><a href="/user/callgager">Вызов замерщика</a></li>
+                    </@security.authorize>
+                        <li><a href="/company/info">Информация</a></li>
+                        <li><a href="/company/career">Карьера</a></li>
+                        <li><a href="/company/guarantee">Гарантия</a></li>
                     </ul>
                 </div>
             </div>

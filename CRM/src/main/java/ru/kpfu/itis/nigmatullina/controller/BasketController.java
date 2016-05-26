@@ -55,56 +55,56 @@ public class BasketController {
             ArrayList<String> itemsView = new ArrayList<>();
             if (b.getBaseCabinetId() != null) {
                 BaseCabinet baseCabinet = b.getBaseCabinetId();
-                itemsView.add(baseCabinet.getName());
                 itemsView.add(Integer.toString(baseCabinet.getArticleNumber()));
+                itemsView.add(baseCabinet.getName());
                 itemsView.add(baseCabinet.getDescription());
                 itemsView.add(Integer.toString(b.getAmount()));
                 itemsView.add(Integer.toString(baseCabinet.getPrice() * b.getAmount()));
                 //itemsView.add(Integer.toString(b.getId()));
             } else if (b.getCabinetForBuiltInAppliancesId() != null) {
                 CabinetForBuiltInAppliances cabinetForBuiltInAppliances = b.getCabinetForBuiltInAppliancesId();
-                itemsView.add(cabinetForBuiltInAppliances.getName());
                 itemsView.add(Integer.toString(cabinetForBuiltInAppliances.getArticleNumber()));
+                itemsView.add(cabinetForBuiltInAppliances.getName());
                 itemsView.add(cabinetForBuiltInAppliances.getDescription());
                 itemsView.add(Integer.toString(b.getAmount()));
                 itemsView.add(Integer.toString(cabinetForBuiltInAppliances.getPrice() * b.getAmount()));
                 //itemsView.add(Integer.toString(b.getId()));
             } else if (b.getDoorId() != null) {
                 Door door = b.getDoorId();
-                itemsView.add(door.getName());
                 itemsView.add(Integer.toString(door.getArticleNumber()));
+                itemsView.add(door.getName());
                 itemsView.add(door.getDescription());
                 itemsView.add(Integer.toString(b.getAmount()));
                 itemsView.add(Integer.toString(door.getPrice() * b.getAmount()));
                 //itemsView.add(Integer.toString(b.getId()));
             } else if (b.getDrawerFrontId() != null) {
                 DrawerFront drawerFront = b.getDrawerFrontId();
-                itemsView.add(drawerFront.getName());
                 itemsView.add(Integer.toString(drawerFront.getArticleNumber()));
+                itemsView.add(drawerFront.getName());
                 itemsView.add(drawerFront.getDescription());
                 itemsView.add(Integer.toString(b.getAmount()));
                 itemsView.add(Integer.toString(drawerFront.getPrice() * b.getAmount()));
                 //itemsView.add(Integer.toString(b.getId()));
             } else if (b.getHighCabinetId() != null) {
                 HighCabinet highCabinet = b.getHighCabinetId();
-                itemsView.add(highCabinet.getName());
                 itemsView.add(Integer.toString(highCabinet.getArticleNumber()));
+                itemsView.add(highCabinet.getName());
                 itemsView.add(highCabinet.getDescription());
                 itemsView.add(Integer.toString(b.getAmount()));
                 itemsView.add(Integer.toString(highCabinet.getPrice() * b.getAmount()));
                 //itemsView.add(Integer.toString(b.getId()));
             } else if (b.getLegId() != null) {
                 Leg leg = b.getLegId();
-                itemsView.add(leg.getName());
                 itemsView.add(Integer.toString(leg.getArticleNumber()));
+                itemsView.add(leg.getName());
                 itemsView.add(leg.getDescription());
                 itemsView.add(Integer.toString(b.getAmount()));
                 itemsView.add(Integer.toString(leg.getPrice() * b.getAmount()));
                 //itemsView.add(Integer.toString(b.getId()));
             } else if (b.getWallCabinetId() != null) {
                 WallCabinet wallCabinet = b.getWallCabinetId();
-                itemsView.add(wallCabinet.getName());
                 itemsView.add(Integer.toString(wallCabinet.getArticleNumber()));
+                itemsView.add(wallCabinet.getName());
                 itemsView.add(wallCabinet.getDescription());
                 itemsView.add(Integer.toString(b.getAmount()));
                 itemsView.add(Integer.toString(wallCabinet.getPrice() * b.getAmount()));
@@ -161,14 +161,9 @@ public class BasketController {
         //modelMap.addAttribute("success", "Товар был успешно добавлен");
         return "redirect:/catalog/" + item_name + "/" + item_id;
     }
+
+    @RequestMapping(value = "/process", method = RequestMethod.GET)
+    public String process() {
+        return "home";
+    }
 }
-/*
-    private Integer id;
-    private User userId;
-    private Integer amount;
-    private BaseCabinet baseCabinetId;
-    private CabinetForBuiltInAppliances cabinetForBuiltInAppliancesId;
-    private DrawerFront drawerFrontId;
-    private HighCabinet highCabinetId;
-    private Leg legId;
-    private WallCabinet wallCabinetId;*/
