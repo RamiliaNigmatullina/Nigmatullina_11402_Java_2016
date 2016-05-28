@@ -15,7 +15,6 @@ public class Character extends Pane {
     int offsetY = 0;
     int width = 32;
     int height = 32;
-    Square removeSquare = null;
     SpriteAnimation animation;
     public Character(ImageView imageView) {
         this.imageView = imageView;
@@ -30,16 +29,6 @@ public class Character extends Pane {
         for(int i = 0; i < Math.abs(x); i++) {
             if (right) this.setTranslateX(this.getTranslateX() + 1);
             else this.setTranslateX(this.getTranslateX() - 1);
-
-            for(Square s : Main.squares) {
-                if (this.getBoundsInParent().intersects(s.getBoundsInParent())) {
-                    Main.score++;
-                    removeSquare = s;
-                    getChildren().removeAll(s);
-                }
-            }
-            Main.squares.remove(removeSquare);
-            Main.gameRoot.getChildren().remove(removeSquare);
 
             if (this.getTranslateX() < -3) {
                 setTranslateX(-3);

@@ -18,7 +18,7 @@ import java.util.Random;
  * Created by ramilanigmatullina on 27.05.16.
  */
 public class Main extends Application {
-    public static ArrayList<Square> squares = new ArrayList<>();
+    public static ArrayList<MyCircle> circles = new ArrayList<>();
     public static Pane appRoot = new Pane();
     public static Pane gameRoot = new Pane();
     public static int score = 0;
@@ -32,21 +32,22 @@ public class Main extends Application {
     ImageView imageView = new ImageView(image);
     Character character = new Character(imageView);
     Button button;
+    boolean gameFinished = false;
     boolean oops = false;
 
     public Parent createContent() {
         button = new Button("New Game");
         gameRoot.setPrefSize(310, 380);
 
-        for(int i = -100; i < 0; i++) {
-            Square square = new Square();
-            square.setTranslateY(i * 200 + 220);
+        for(int i = -500; i < 0; i++) {
+            MyCircle circle = new MyCircle();
+            circle.setTranslateY(i * 200 + 220);
 
-            int height = new Random().nextInt(290);
-            square.setTranslateX(height);
-            squares.add(square);
+            int x = new Random().nextInt(280);
+            circle.setTranslateX(x);
+            circles.add(circle);
 
-            gameRoot.getChildren().addAll(square);
+            gameRoot.getChildren().addAll(circle);
         }
 
         scoreLabel.setTranslateX(10);
@@ -63,18 +64,6 @@ public class Main extends Application {
     }
 
     public void update() {
-        scoreLabel.setText("Score: " + score);
-
-        if (squares != null)
-            for (Square square : squares) {
-                square.setTranslateY(square.getTranslateY() + 2);
-                if (square.getTranslateY() == 362) {
-                    gameOver.setText("Game over");
-                    yourScore.setText("Your score: " + score);
-                    scoreLabel.setText(" ");
-                    oops = true;
-                }
-            }
 
         if (isPressed(KeyCode.RIGHT)) {
             character.animation.play();
@@ -84,15 +73,34 @@ public class Main extends Application {
             character.animation.play();
             character.animation.setOffsetY(32);
             character.moveX(-2);
-        } else{
+        } else {
             character.animation.stop();
         }
 
-        if (oops) {
-            for (Square square : squares) {
-                gameRoot.getChildren().remove(square);
+        if (!gameFinished)
+            scoreLabel.setText("Score: " + score);
+            for (MyCircle circle : circles) {
+                circle.setTranslateY(circle.getTranslateY() + 2);
+                if (character.getBoundsInParent().intersects(circle.getBoundsInParent())) {
+                    score++;
+                    circles.remove(circle);
+                    gameRoot.getChildren().remove(circle);
+                    break;
+                } else if (circle.getTranslateY() == 362) {
+                    gameOver.setText("Game over");
+                    yourScore.setText("Your score: " + score);
+                    scoreLabel.setText(" ");
+                    oops = true;
+                    break;
+                }
+            }
+
+        if (oops && !gameFinished) {
+            for (MyCircle circle : circles) {
+                gameRoot.getChildren().remove(circle);
             }
             gameRoot.getChildren().addAll(button);
+            gameFinished = true;
         }
     }
 
@@ -114,8 +122,7 @@ public class Main extends Application {
         AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-                if (!oops)
-                    update();
+                update();
             }
         };
         timer.start();
