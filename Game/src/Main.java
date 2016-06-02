@@ -77,7 +77,7 @@ public class Main extends Application {
             character.animation.stop();
         }
 
-        if (!gameFinished)
+        if (!gameFinished) {
             scoreLabel.setText("Score: " + score);
             for (MyCircle circle : circles) {
                 circle.setTranslateY(circle.getTranslateY() + 2);
@@ -94,6 +94,7 @@ public class Main extends Application {
                     break;
                 }
             }
+        }
 
         if (oops && !gameFinished) {
             for (MyCircle circle : circles) {
