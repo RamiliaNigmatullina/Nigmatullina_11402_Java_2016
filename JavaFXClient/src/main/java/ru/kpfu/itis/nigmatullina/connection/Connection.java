@@ -35,10 +35,10 @@ public class Connection {
         byte[] bytes = (username + ":" + password).getBytes();
         data = "Basic " + Base64.getEncoder().encodeToString(bytes);
         try {
-            //user = restTemplate.exchange(url, HttpMethod.GET, request(), User.class).getBody();
-            user = new User();
+            user = restTemplate.exchange(url, HttpMethod.GET, request(), User.class).getBody();
+            /*user = new User();
             user.setUsername("user");
-            user.setPassword("User4627");
+            user.setPassword("User4627");*/
             return user;
         } catch (Exception e) {
             return null;
