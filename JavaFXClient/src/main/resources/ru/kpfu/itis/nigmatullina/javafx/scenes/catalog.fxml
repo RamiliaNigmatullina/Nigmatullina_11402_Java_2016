@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="240.0" prefWidth="299.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2"
+            fx:controller="ru.kpfu.itis.nigmatullina.controller.MyController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0"
+                   fill="linear-gradient(from 0.0% 0.0% to 0.0% 0.0%, 0xd7d7d7ff 0.0%, 0xd7d7d7ff 30.0%, 0xd7d7d7ff 30.0%)"
+                   height="40.0" layoutX="0.0" layoutY="0.0" strokeType="INSIDE" width="299.0"/>
+        <Label alignment="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="40.0" prefWidth="102.0" text="Каталог">
+            <font>
+                <Font name="Times New Roman" size="20.0" />
+            </font>
+        </Label>
+
+        <Button id="baseCabinets" layoutX="20.0" layoutY="45.0" mnemonicParsing="false" onAction="#baseCabinets" prefHeight="25.0" prefWidth="259.0" text="Напольные шкафы" />
+        <Button id="cabinetsForBuiltInAppliances" layoutX="20.0" layoutY="72.0" mnemonicParsing="false" onAction="#cabinetsForBuiltInAppliances" prefHeight="25.0" prefWidth="259.0" text="Шкафы для встраиваемой техники" />
+        <Button id="doors" layoutX="20.0" layoutY="99.0" mnemonicParsing="false" onAction="#doors" prefHeight="25.0" prefWidth="259.0" text="Фронтальные панели" />
+        <Button id="drawerFronts" layoutX="20.0" layoutY="126.0" mnemonicParsing="false" onAction="#drawerFronts" prefHeight="25.0" prefWidth="259.0" text="Двери" />
+        <Button id="highCabinets" contentDisplay="CENTER" layoutX="20.0" layoutY="153.0" mnemonicParsing="false" onAction="#highCabinets" prefHeight="25.0" prefWidth="259.0" text="Высокие шкафы" textAlignment="CENTER" wrapText="true" />
+        <Button id="legs" layoutX="20.0" layoutY="180.0" mnemonicParsing="false" onAction="#legs" prefHeight="25.0" prefWidth="259.0" text="Ножки" />
+        <Button id="wallCabinets" layoutX="20.0" layoutY="207.0" mnemonicParsing="false" onAction="#wallCabinets" prefHeight="25.0" prefWidth="259.0" text="Навесные шкафы" />
+        <Hyperlink layoutX="230.0" layoutY="9.0" minHeight="14.0" onMouseClicked="#logout" prefHeight="23.0" text="Выйти" textFill="BLACk"/>
+    </children>
+</AnchorPane>

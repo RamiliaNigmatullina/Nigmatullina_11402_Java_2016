@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/2.2"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.kpfu.itis.nigmatullina.controllers.LoginController">
+  <children>
+    <TextField fx:id="usernameTextField" layoutX="40.0" layoutY="85.0" prefWidth="200.0"/>
+    <PasswordField fx:id="passwordField" layoutX="40.0" layoutY="150.0" prefWidth="200.0"/>
+    <Label alignment="CENTER" contentDisplay="LEFT" layoutX="14.0" layoutY="12.0" prefHeight="30.0" prefWidth="271.0" text="Вход" textAlignment="CENTER">
+      <font>
+        <Font name="Times New Roman" size="20.0" />
+      </font>
+    </Label>
+    <Label layoutX="40.0" layoutY="60.0" text="Username">
+      <font>
+        <Font name="Times New Roman" size="16.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label layoutX="40.0" layoutY="125.0" text="Пароль" font="$x1"/>
+    <Button layoutX="99.0" layoutY="195.0"  mnemonicParsing="false" onAction="#login"  prefHeight="23.0" prefWidth="102.0" text="Войти" textAlignment="CENTER" font="$x1"/>
+    <Label fx:id="errorField" alignment="CENTER" layoutX="50.0" layoutY="43.0" prefWidth="200.0" text="" textAlignment="CENTER" textFill="#ff3333" />
+  </children>
+</AnchorPane>
